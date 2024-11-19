@@ -246,3 +246,61 @@ This guide will walk you through creating a custom block in Adobe Experience Des
      });
    }
    ```
+
+# Adding Section Metadata in EDS
+
+# Adding Section Metadata in EDS Documentation
+
+To include section metadata in your EDS documentation, you need to create a table with the heading **Section Metadata**. This table will consist of two columns: **Name** and **Value**, where you can define the metadata information.
+
+---
+
+## Steps to Add Section Metadata
+
+1. Create a table with the title **Section Metadata** in your documentation.
+2. Add two columns in the table:
+
+   - **Name**: Represents the metadata key.
+   - **Value**: Represents the corresponding metadata value.
+
+3. Populate the table with the required metadata details.
+
+---
+
+## Example 1
+
+![alt text](image-3.png)
+
+## Output
+
+![alt text](image-4.png)
+
+This format will help in organizing and maintaining metadata effectively in your EDS documentation.
+
+# Adding Metadata to a Specific Page in EDS Documentation
+
+To include metadata for a specific page in your EDS documentation, you need to create a table titled **Metadata** at the end of the page. This table will consist of two columns: **Name** and **Value**, where you can define the metadata information.
+
+---
+
+## Steps to Add Page-Specific Metadata
+
+1. Navigate to the specific page in your EDS documentation.
+2. At the end of the page, create a table with the title **Metadata**.
+3. Add two columns in the table:
+
+   - **Name**: Represents the metadata key.
+   - **Value**: Represents the corresponding metadata value.
+
+4. Populate the table with the required metadata details relevant to the page.
+
+---
+
+## Example
+
+Here’s an example of how the table should look at the end of the page:
+![alt text](image-5.png)
+
+## Example Output
+
+![alt text](image-6.png)
