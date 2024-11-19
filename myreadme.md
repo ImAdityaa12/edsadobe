@@ -352,3 +352,72 @@ To create routes in EDS, you need to follow a specific folder and file structure
 ## Example Structure
 
 Here’s an example directory structure for routes and associated files:
+
+# Fetching Data from Sheets in EDS Documentation
+
+This guide explains the process of retrieving data from sheets in your EDS documentation. It includes creating and linking a preview sheet and fetching data into a custom table using JavaScript and CSS.
+
+---
+
+## Steps to Fetch Data from Sheets
+
+### 1. **Create and Preview a Sheet**
+
+- Create a sheet in your EDS workspace and add the required data.
+  ![alt text](image-9.png)
+- Click on the **Preview** option to generate the sheet's preview URL.
+
+## Preview
+
+![alt text](image-10.png)
+Example preview URL:  
+ `https://main--edsadobe--imadityaa12.aem.page/countries.json?offset=0&limit=11`
+
+### 2. **Link the Sheet in a Doc File**
+
+- Create a Google Docs file where you want to link the sheet.
+  ![alt text](image-11.png)
+- In the doc file, create a table and add the preview URL of the sheet in the table.
+  ![alt text](image-12.png)
+
+### 3. **Preview the Document**
+
+- Preview the document to ensure the sheet link is correctly displayed and functional.
+
+---
+
+## Steps to Fetch Data into a Table
+
+### 1. **Create Required Files**
+
+- Inside the `block` folder of your project, create the following files:
+  - `table.js`: For fetching and displaying data.
+  - `table.css`: For styling the table.
+    ![alt text](image-13.png)
+
+### 2. **Fetch Data from URL**
+
+- Use the preview URL from the sheet to fetch data dynamically in the `table.js` file.
+
+---
+
+## Example Code
+
+### `table.js`
+
+```javascript
+const fetchData = async () => {
+  const url = "https://example.com";
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    renderTable(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+const renderTable = (data) => {
+  //code
+};
+```
