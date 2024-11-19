@@ -420,4 +420,7 @@ const fetchData = async () => {
 const renderTable = (data) => {
   //code
 };
+export default function decorate(block) {
+  //code
+}
 ```
