@@ -304,3 +304,51 @@ Here’s an example of how the table should look at the end of the page:
 ## Example Output
 
 ![alt text](image-6.png)
+
+# Creating Routes in EDS Documentation
+
+To create routes in EDS, you need to follow a specific folder and file structure. This ensures that the desired routes are generated correctly and can include custom navigation and footer files if needed.
+
+---
+
+## Steps to Create Routes
+
+### 1. Create a Folder for the Route
+
+![alt text](image-7.png)
+
+- Create a folder with the desired routing name.  
+  For example, to create a route `/folder`, name the folder `folder`.
+
+### 2. Add an `index` File
+
+- Inside the folder, create a Google Docs file named `index`.
+- This will generate the route `/folder`.
+
+## Output
+
+![alt text](image-8.png)
+
+### 3. Add Additional Files
+
+- If you create another Google Docs file with a different name in the same folder, the route will be `/folder/filename`.  
+  For example:
+  - A file named `about` inside `folder` will generate the route `/folder/about`.
+
+---
+
+## Adding Custom Navigation and Footer
+
+### 1. Custom Navigation
+
+- To include a custom navigation bar for the route, create a Google Docs file named `nav` inside the folder.
+
+### 2. Custom Footer
+
+- To include a custom footer, create a Google Docs file named `footer` inside the folder.
+
+---
+
+## Example Structure
+
+Here’s an example directory structure for routes and associated files:
