@@ -318,16 +318,12 @@ To create routes in EDS, you need to follow a specific folder and file structure
 ![alt text](readmeAssests/image-19.png)
 
 - Create a folder with the desired routing name.  
-  For example, to create a route `/folder/`, name the folder `folder`.
+  For example, to create a route `/folder`, name the folder `folder`.
 
 ### 2. Add an `index` File
 
 - Inside the folder, create a Google Docs file named `index`.
-- This will generate the route `/folder/`.
-
-### 3. Add a File for a Specific Route
-
-- Inside the folder, create a Google Docs file named `example` the route would be `/folder/example`.
+- This will generate the route `/folder`.
 
 ## Output
 
@@ -507,8 +503,7 @@ This guide explains how to create and use placeholders in your EDS documentation
 -Modify the code in your aem.js to fetch and use placeholders.
 
 ```javascript
-async function fetchPlaceholders(prefix = "") {
-  console.log(prefix);
+async function fetchPlaceholders(prefix = "default") {
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
@@ -516,7 +511,7 @@ async function fetchPlaceholders(prefix = "") {
         window.location.origin + "/" + prefix + "/placeholders.json"
       );
       if (prefix === "") {
-        localizedUrl = window.location.origin + "/placeholders.json";
+        localizedUrl = newUrl(window.location.origin + "/placeholders.json");
       }
       fetch(localizedUrl)
         .then((resp) => {
@@ -580,41 +575,3 @@ const { data1, data2 } = placeholders;
 console.log(data1); // Outputs the text corresponding to 'data1'
 console.log(data2); // Outputs the text corresponding to 'data2'
 ```
-
-# Adobe Block Collection in EDS
-
-Adobe has developed a collection of reusable **blocks** to simplify the creation of dynamic and interactive components in your EDS projects. These blocks include commonly used components like forms, carousels, accordions, breadcrumbs, and more.
-
----
-
-## Overview
-
-The **Block Collection** provides pre-built components that can be seamlessly integrated into your EDS projects, allowing for faster development and consistent design.
-
----
-
-## Available Blocks
-
-Some of the commonly used blocks include:
-
-- **Form**: Create interactive and user-friendly forms.
-- **Carousel**: Display images or content in a rotating slideshow.
-- **Accordion**: Add collapsible sections for better content organization.
-- **Breadcrumbs**: Implement navigation aids to improve user experience.
-
----
-
-## Documentation
-
-Detailed documentation for each block, including implementation guidelines, is available at:  
-[Adobe Block Collection Documentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/block-collection)
-
-This resource provides information on:
-
-- How to use each block.
-- Configuration options.
-- Examples of integration with EDS.
-
----
-
-By utilizing Adobe's Block Collection, you can efficiently build feature-rich and user-friendly EDS projects.
