@@ -318,12 +318,16 @@ To create routes in EDS, you need to follow a specific folder and file structure
 ![alt text](readmeAssests/image-19.png)
 
 - Create a folder with the desired routing name.  
-  For example, to create a route `/folder`, name the folder `folder`.
+  For example, to create a route `/folder/`, name the folder `folder`.
 
 ### 2. Add an `index` File
 
 - Inside the folder, create a Google Docs file named `index`.
-- This will generate the route `/folder`.
+- This will generate the route `/folder/`.
+
+### 3. Add a File for a Specific Route
+
+- Inside the folder, create a Google Docs file named `example` the route would be `/folder/example`.
 
 ## Output
 
