@@ -2,7 +2,8 @@ import { fetchPlaceholders, getMetadata } from "../../scripts/aem.js";
 
 async function placeholders() {
   const locale = getMetadata("locale");
-  const placeholders = await fetchPlaceholders(locale);
+  console.log(locale);
+  const placeholders = await fetchPlaceholders();
   console.log(placeholders);
 }
 export default function decorate(block) {

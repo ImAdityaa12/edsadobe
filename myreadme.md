@@ -503,7 +503,8 @@ This guide explains how to create and use placeholders in your EDS documentation
 -Modify the code in your aem.js to fetch and use placeholders.
 
 ```javascript
-async function fetchPlaceholders(prefix = "default") {
+async function fetchPlaceholders(prefix = "") {
+  console.log(prefix);
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
@@ -511,7 +512,7 @@ async function fetchPlaceholders(prefix = "default") {
         window.location.origin + "/" + prefix + "/placeholders.json"
       );
       if (prefix === "") {
-        localizedUrl = newUrl(window.location.origin + "/placeholders.json");
+        localizedUrl = window.location.origin + "/placeholders.json";
       }
       fetch(localizedUrl)
         .then((resp) => {

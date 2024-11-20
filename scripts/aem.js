@@ -531,7 +531,8 @@ function decorateSections(main) {
  * @returns {object} Window placeholders object
  */
 // eslint-disable-next-line import/prefer-default-export
-async function fetchPlaceholders(prefix = "default") {
+async function fetchPlaceholders(prefix = "") {
+  console.log(prefix);
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
@@ -539,7 +540,7 @@ async function fetchPlaceholders(prefix = "default") {
         window.location.origin + "/" + prefix + "/placeholders.json"
       );
       if (prefix === "") {
-        localizedUrl = newUrl(window.location.origin + "/placeholders.json");
+        localizedUrl = window.location.origin + "/placeholders.json";
       }
       fetch(localizedUrl)
         .then((resp) => {
